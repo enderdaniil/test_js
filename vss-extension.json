@@ -1,0 +1,45 @@
+{
+  "manifestVersion": 1,
+  "id": "Table-Extension",
+  "publisher": "SomePublisherName",
+  "version": "1.0.0",
+  "name": "Table-Extension",
+  "description": "A sample js table for Azure",
+  "public": false,
+  "categories": [ "Azure Repos" ],
+  "baseUri": "http://localhost:3000",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "sample-work-item-form-page",
+      "type": "ms.vss-work-web.work-item-form-page",
+      "description": "Custom work item form page",
+      "targets": [
+        "ms.vss-work-web.work-item-form"
+      ],
+      "properties": {
+        "name": "Table",
+        "uri": "public/index.html"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "node_modules/vss-web-extension-sdk/lib",
+      "addressable": true,
+      "packagePath": "lib"
+    },
+    {
+      "path": "src",
+      "addressable": true
+    },
+    {
+      "path": "public",
+      "addressable": true
+    }
+  ]
+}
